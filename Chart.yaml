@@ -1,0 +1,18 @@
+# Copyright (c) 2020, Oracle Corporation and/or its affiliates.
+# Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
+
+apiVersion: v1
+description: Oracle Database Server
+home: https://maximilianopizarro.github.io/oracle-helm-charts/
+name: oracle12c
+version: 0.1.0
+keywords:
+- oracle
+- database
+
+maintainers: 
+  - name: Maximiliano Pizarro
+    email: maximiliano.pizarro.5@gmail.com
+    url: http://www.linkedin.com/in/maximiliano-gregorio-pizarro-consultor-it
+
+icon: https://raw.githubusercontent.com/maximilianoPizarro/oracle-helm-charts/main/oracle-icon.png

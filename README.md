@@ -26,12 +26,12 @@ helm repo add oracle12c https://maximilianopizarro.github.io/oracle-helm-charts/
 ## Install Chart with parameters
 
 ```bash
-helm install oracle12c oracle12c/oracle12c --version "VERSION"
+helm install oracle12c oracle-helm-charts/oracle-helm-charts --version "VERSION"
 ```
 
 ```bash
 Example:
-helm install oracle12c oracle12c/oracle12c --version 0.1.0
+helm install oracle12c oracle-helm-charts/oracle-helm-charts --version 0.1.0
 ```
 
 

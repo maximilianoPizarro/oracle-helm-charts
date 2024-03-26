@@ -1,4 +1,4 @@
-# Oracle 12C Helm Charts Single Instance on Red Hat OpenShift
+# Oracle 12C Database Single Instance Helm Charts on Red Hat OpenShift
 <p align="left">
 <img src="https://img.shields.io/badge/redhat-CC0000?style=for-the-badge&logo=redhat&logoColor=white" alt="Redhat">
 <img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" alt="kubernetes">

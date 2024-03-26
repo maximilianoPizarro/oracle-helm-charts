@@ -32,7 +32,7 @@ env:
 {{/* oracle db labels */}}
 {{- define "oracle12c-labels" }}
 labels:
-  app: {{ template "fullname" . }}
+  app: {{ .Chart.Name }}
   chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
   release: {{ .Release.Name }}
   heritage: {{ .Release.Service }}

@@ -6,7 +6,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ template "fullname" . }}
+  name: {{ .Chart.Name }}
 {{- include "oracle12c-labels" . | indent 2 }}
 spec:
 {{- if .Values.loadBalService }}
@@ -22,6 +22,6 @@ spec:
     port: 5500
     protocol: TCP
   selector:
-    app: {{ template "fullname" . }}
-    deployment: {{ template "fullname" . }}   
+    app: {{ .Chart.Name }}
+    deployment: {{ .Chart.Name }}   
 ---

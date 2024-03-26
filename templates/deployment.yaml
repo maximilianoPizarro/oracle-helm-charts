@@ -6,7 +6,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "fullname" . }}
+  name: {{ .Chart.Name }}
 {{- include "oracle12c-labels" . |indent 2}}
 spec:
   replicas: {{ default 1 .Values.replicas }}
@@ -17,11 +17,11 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: {{ template "fullname" . }}
+      app: {{ .Chart.Name }}
   template:
     metadata:
       labels:
-        app: {{ template "fullname" . }}
+        app: {{ .Chart.Name }}
     spec:
       terminationGracePeriodSeconds: 30
     {{- if .Values.imagePullSecrets}}

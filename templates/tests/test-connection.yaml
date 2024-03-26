@@ -9,7 +9,7 @@ metadata:
   name: {{ .Release.Name }}-connection-test
   annotations:
     "helm.sh/hook": test-success
-{{- include "oracle-db-labels" . | indent 2 }}
+{{- include "oracle12c-labels" . | indent 2 }}
 spec:
 {{- if .Values.imagePullSecrets}}
   imagePullSecrets:
@@ -18,7 +18,7 @@ spec:
   containers:
   - name: {{ .Release.Name }}-connection-test
     image: {{ .Values.image }}
-{{- include "oracle-db-env" . | indent 4 }}
+{{- include "oracle12c-env" . | indent 4 }}
     command: ["sh"]
     args: [ "-c", "status=`/bin/echo -en 'set heading off\nset pagesize 0\nselect status from v\\$instance;\nexit\n' | sqlplus -S sys/$ORACLE_PWD@//$SVC_HOST:$SVC_PORT/$ORACLE_SID as sysdba`;cmdret=$?;/bin/echo \"cmdret=$cmdret, status=$status\";if [[ $status == \"OPEN\" ]]; then exit 0; else exit 1;fi " ]
   restartPolicy: Never

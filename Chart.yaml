@@ -2,7 +2,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
 
 apiVersion: v1
-description: Oracle Database Server
+description: Oracle 12c Database Server
 home: https://maximilianopizarro.github.io/oracle-helm-charts/
 name: oracle12c
 version: 0.1.0

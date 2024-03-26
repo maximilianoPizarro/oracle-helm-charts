@@ -7,7 +7,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ template "fullname" . }}
-{{- include "oracle-db-labels" . |indent 2}}
+{{- include "oracle12c-labels" . |indent 2}}
 spec:
   replicas: {{ default 1 .Values.replicas }}
   strategy:
@@ -38,7 +38,7 @@ spec:
       {{- end }}
     {{- end }}
       containers:
-        - name: oracle-db
+        - name: {{ .Chart.Name }}
           image: {{ .Values.image }}
           imagePullPolicy: {{ default "IfNotPresent" .Values.imagePullPolicy | quote }}
         {{- if .Values.preStopHook }}
@@ -63,8 +63,13 @@ spec:
             - mountPath: /u03
               name: u03
             - mountPath: /u04
-              name: u04     
-{{- include "oracle-db-env" . | indent 10 }}
+              name: u04
+          resources:
+            limits:
+              memory: 2Gi
+            requests:
+              memory: 2Gi                   
+{{- include "oracle12c-env" . | indent 10 }}
       volumes:
         - name: oracle-configuration-volume
           configMap:

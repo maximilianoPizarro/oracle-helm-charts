@@ -34,5 +34,5 @@ echo XDB at $NODE_IP:$NODE_XDB_PORT
 
 Oracle Databases SID, PDB name can be figured out by :
 
-ORACLE_SID=$(kubectl get  -o jsonpath="{.spec.template.spec.containers[?(.name == 'oracle-db')].env[?(.name == 'ORACLE_SID')].value }" deploy {{ template "fullname" . }})
-ORACLE_PDB=$(kubectl get  -o jsonpath="{.spec.template.spec.containers[?(.name == 'oracle-db')].env[?(.name == 'ORACLE_PDB')].value }" deploy {{ template "fullname" . }})
+ORACLE_SID=$(kubectl get  -o jsonpath="{.spec.template.spec.containers[?(.name == 'oracle12c')].env[?(.name == 'ORACLE_SID')].value }" deploy {{ template "fullname" . }})
+ORACLE_PDB=$(kubectl get  -o jsonpath="{.spec.template.spec.containers[?(.name == 'oracle12c')].env[?(.name == 'ORACLE_PDB')].value }" deploy {{ template "fullname" . }})

@@ -7,12 +7,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ template "fullname" . }}
-{{- include "oracle-db-labels" . | indent 2 }}
+{{- include "oracle12c-labels" . | indent 2 }}
 spec:
 {{- if .Values.loadBalService }}
   type: LoadBalancer
 {{- else}}
-  type: NodePort
+  type: ClusterIP
 {{- end }}
   ports:
   - name: listener
@@ -23,4 +23,5 @@ spec:
     protocol: TCP
   selector:
     app: {{ template "fullname" . }}
+    deployment: {{ template "fullname" . }}   
 ---

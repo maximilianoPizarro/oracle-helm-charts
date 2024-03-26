@@ -8,6 +8,9 @@
 <a href="https://artifacthub.io/packages/search?repo=oracle-helm-charts"><img src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/oracle-helm-charts" alt="Artifact Hub" /></a>
 </p>
 
+<p align="left">
+  <img src="https://github.com/maximilianoPizarro/oracle-helm-charts/blob/main/image/oracle-ocp-topology.PNG?raw=true" width="900" title="Run On Openshift">
+</p>
 
 # Installation
 
@@ -32,6 +35,18 @@ helm install oracle12c oracle12c/oracle12c --version 0.1.0
 ```
 
 
+## Test connection
+
+<p align="left">
+  <img src="https://github.com/maximilianoPizarro/oracle-helm-charts/blob/main/image/oracle-test.PNG?raw=true" width="900" title="Run On Openshift">
+</p>
+
+```bash
+Example:
+sqlplus sys/Oradoc_db1 as sysdba
+```
+
+
 ## Uninstall Chart
 
 ```bash
@@ -42,6 +57,7 @@ helm uninstall oracle12c
 
 - [GitHub Page](https://maximilianopizarro.github.io/oracle-helm-charts/)
 - [GitHub Repo](https://github.com/maximilianoPizarro/oracle-helm-charts)
+- [GitHub Oficial Repo](https://github.com/maximilianoPizarro/docker-images/tree/main/OracleDatabase/SingleInstance)
 
 ## Package Steps
 

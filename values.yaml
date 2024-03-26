@@ -3,7 +3,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at http://oss.oracle.com/licenses/upl.
 #
 
-# Default values for oracle-db. Please check README for more information about below parameters
+# Default values for oracle12c. Please check README for more information about below parameters
 
 ##This parameter changes the ORACLE_SID of the database. The default value is set to ORCLCDB.
 oracle_sid: ORCLCDB
@@ -36,7 +36,7 @@ loadBalService: false
 
 ## name of image
 #image: container-registry.oracle.com/database/enterprise:19.3.0.0
-image: quay.io/maximilianopizarro/tfi-oracle12c:12
+image: quay.io/maximilianopizarro/oracle12c
 
 ## image pull policy, IfNotPresent or Always
 imagePullPolicy: Always

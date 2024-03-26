@@ -20,21 +20,17 @@ We truncate at 63 chars because some Kubernetes name fields are limited to this 
 {{- printf "%s-%s" .Release.Name $name | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 {{/* Expand Variables using a template */}}
-{{- define "oracle-db-env" }}
+{{- define "oracle12c-env" }}
 env:
   - name: ORACLE_SID
     value: {{ default "ORCLCDB" .Values.oracle_sid | quote }}
-  - name: ORACLE_EDITION
-    value: {{ default "enterprise" .Values.oracle_edition | quote }}
-  - name: ENABLE_ARCHIVELOG
-    value: {{ default false .Values.enable_archivelog | quote}}
   - name: PATH
     value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/u01/app/oracle/product/12.2.0/dbhome_1/bin
   - name: ORACLE_HOME
     value: /u01/app/oracle/product/12.2.0/dbhome_1       
 {{- end }}
 {{/* oracle db labels */}}
-{{- define "oracle-db-labels" }}
+{{- define "oracle12c-labels" }}
 labels:
   app: {{ template "fullname" . }}
   chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}

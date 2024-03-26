@@ -6,9 +6,11 @@ description: Oracle 12c Database Server
 home: https://maximilianopizarro.github.io/oracle-helm-charts/
 name: oracle12c
 version: 0.1.0
+appVersion: "12.2.0.1"
 keywords:
 - oracle
 - database
+- openshift
 
 maintainers: 
   - name: Maximiliano Pizarro

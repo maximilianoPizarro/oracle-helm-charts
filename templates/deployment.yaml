@@ -7,7 +7,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Chart.Name }}
-{{- include "oracle12c-labels" . |indent 2}}
+  labels:  
+    {{- include "oracle12c-labels" . | nindent 4 }}
 spec:
   replicas: {{ default 1 .Values.replicas }}
   strategy:
@@ -18,10 +19,12 @@ spec:
   selector:
     matchLabels:
       app: {{ .Chart.Name }}
+      deployment: {{ .Chart.Name }}
   template:
     metadata:
       labels:
         app: {{ .Chart.Name }}
+        deployment: {{ .Chart.Name }}
     spec:
       terminationGracePeriodSeconds: 30
     {{- if .Values.imagePullSecrets}}

@@ -3,9 +3,9 @@ entries:
   oracle12c:
   - apiVersion: v1
     appVersion: 12.2.0.1
-    created: "2024-03-26T22:11:43.024181852Z"
+    created: "2024-03-27T14:50:27.579354139Z"
     description: Oracle 12c Database Server
-    digest: ce3d7927cb4c7830f38a82b74f6ff65079a9c5f3f4c91ccafad9075bd3777809
+    digest: 80389c915911fe058546cdc2230bfa855aecb91fe6b32ddcd41f6504ab81f91a
     home: https://maximilianopizarro.github.io/oracle-helm-charts/
     icon: https://raw.githubusercontent.com/maximilianoPizarro/oracle-helm-charts/main/oracle-icon.png
     keywords:
@@ -20,4 +20,4 @@ entries:
     urls:
     - charts/oracle12c-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-26T22:11:43.023445568Z"
+generated: "2024-03-27T14:50:27.578480615Z"

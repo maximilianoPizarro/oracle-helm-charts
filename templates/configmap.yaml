@@ -2,7 +2,8 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: oracle-configuration
-{{- include "oracle12c-labels" . |indent 2}}   
+  labels:  
+    {{- include "oracle12c-labels" . | nindent 4 }}
 data:
   configDBora.sh: |-
     #!/bin/sh

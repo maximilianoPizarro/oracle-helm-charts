@@ -31,11 +31,11 @@ env:
 {{- end }}
 {{/* oracle db labels */}}
 {{- define "oracle12c-labels" }}
-labels:
-  app: {{ .Chart.Name }}
-  chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
-  release: {{ .Release.Name }}
-  heritage: {{ .Release.Service }}
-  app.openshift.io/runtime: oracle 
+app.kubernetes.io/name: {{ .Chart.Name }}
+app.kubernetes.io/instance: {{ .Chart.Name }}
+app.openshift.io/runtime: oracle 
+chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+release: {{ .Release.Name }}
+heritage: {{ .Release.Service }}
 {{- end }}
 

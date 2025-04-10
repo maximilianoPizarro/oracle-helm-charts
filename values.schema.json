@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "availabilityDomain": {
+      "default": "",
+      "description": "# Deploy only on nodes in a particular availability domain, eg PHX-AD-1 on OCI\n# Leave empty if there is no such requirement",
+      "required": [],
+      "title": "availabilityDomain",
+      "type": "null"
+    },
+    "enable_archivelog": {
+      "default": false,
+      "description": "# Enable archive log mode when creating the database",
+      "required": [],
+      "title": "enable_archivelog",
+      "type": "boolean"
+    },
+    "global": {
+      "description": "Global values are values that can be accessed from any chart or subchart by exactly the same name.",
+      "required": [],
+      "title": "global",
+      "type": "object"
+    },
+    "image": {
+      "default": "quay.io/maximilianopizarro/oracle12c",
+      "description": "# name of image\nimage: container-registry.oracle.com/database/enterprise:19.3.0.0",
+      "required": [],
+      "title": "image",
+      "type": "string"
+    },
+    "imagePullPolicy": {
+      "default": "Always",
+      "description": "# image pull policy, IfNotPresent or Always",
+      "required": [],
+      "title": "imagePullPolicy",
+      "type": "string"
+    },
+    "imagePullSecrets": {
+      "default": "",
+      "description": "# container registry login/password",
+      "required": [],
+      "title": "imagePullSecrets",
+      "type": "null"
+    },
+    "loadBalService": {
+      "default": false,
+      "description": "# deploy LoadBalancer service",
+      "required": [],
+      "title": "loadBalService",
+      "type": "boolean"
+    },
+    "nodeLabels": {
+      "default": "",
+      "description": "# Deploy only on nodes having required labels .\n# Format label_name : label_value . eg pool: sidb\n# Leave empty if there is no such requirement",
+      "required": [],
+      "title": "nodeLabels",
+      "type": "null"
+    },
+    "oracle_characterset": {
+      "default": "AL32UTF8",
+      "description": "# The character set to use when creating the database. Defaults to AL32UTF8",
+      "required": [],
+      "title": "oracle_characterset",
+      "type": "string"
+    },
+    "oracle_edition": {
+      "default": "community",
+      "description": "# The database edition (default: enterprise)",
+      "required": [],
+      "title": "oracle_edition",
+      "type": "string"
+    },
+    "oracle_pdb": {
+      "default": "ORCLPDB1",
+      "description": "#This parameter modifies the name of the PDB. The default value is set to ORCLPDB1.",
+      "required": [],
+      "title": "oracle_pdb",
+      "type": "string"
+    },
+    "oracle_pwd": {
+      "default": "Oradoc_db1",
+      "description": "# The Oracle Database SYS, SYSTEM and PDB_ADMIN password. Defaults to a randomly generated password",
+      "required": [],
+      "title": "oracle_pwd",
+      "type": "string"
+    },
+    "oracle_sid": {
+      "default": "ORCLCDB",
+      "description": "#This parameter changes the ORACLE_SID of the database. The default value is set to ORCLCDB.",
+      "required": [],
+      "title": "oracle_sid",
+      "type": "string"
+    },
+    "replicas": {
+      "default": 1,
+      "description": "# Deploy multiple replicas for fast fail over\n# If 'persistence' is 'null' then fast fail over will not happen even if replicas\u003e1 (as no persistence)",
+      "required": [],
+      "title": "replicas",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "oracle_sid",
+    "oracle_pdb",
+    "oracle_pwd",
+    "oracle_characterset",
+    "oracle_edition",
+    "enable_archivelog",
+    "availabilityDomain",
+    "replicas",
+    "loadBalService",
+    "image",
+    "imagePullPolicy",
+    "imagePullSecrets",
+    "nodeLabels"
+  ],
+  "type": "object"
+}

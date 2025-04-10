@@ -5,9 +5,9 @@ entries:
       charts.openshift.io/name: Oracle 12c
     apiVersion: v2
     appVersion: 12.2.0.1
-    created: "2025-04-10T10:18:55.2397508-03:00"
+    created: "2025-04-10T10:36:26.1568723-03:00"
     description: Oracle 12c Database Server
-    digest: 9a74f9ea0b3107e360705fbf4ae9a8827bbd2f422b1d3b163d7ab68c7dd772d4
+    digest: 4af332e304e091f2abc32363cb23439f85760690eed16c16ce5eb3d8b78d5581
     home: https://maximilianopizarro.github.io/oracle-helm-charts/
     icon: https://raw.githubusercontent.com/maximilianoPizarro/oracle-helm-charts/main/oracle-icon.png
     keywords:
@@ -24,4 +24,4 @@ entries:
     urls:
     - charts/oracle12c-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-10T10:18:55.2386967-03:00"
+generated: "2025-04-10T10:36:26.1553576-03:00"

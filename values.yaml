@@ -25,7 +25,7 @@ enable_archivelog: false
 
 ## Deploy only on nodes in a particular availability domain, eg PHX-AD-1 on OCI
 ## Leave empty if there is no such requirement
-availabilityDomain:
+availabilityDomain: null
 
 ## Deploy multiple replicas for fast fail over
 ## If 'persistence' is 'null' then fast fail over will not happen even if replicas>1 (as no persistence)
@@ -42,10 +42,10 @@ image: quay.io/maximilianopizarro/oracle12c
 imagePullPolicy: Always
 
 ## container registry login/password
-imagePullSecrets:
+imagePullSecrets: null
 
 ## Deploy only on nodes having required labels .
 ## Format label_name : label_value . eg pool: sidb
 ## Leave empty if there is no such requirement
-nodeLabels:
+nodeLabels: null
 #  pool: sidb

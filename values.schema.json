@@ -107,13 +107,10 @@
     "oracle_characterset",
     "oracle_edition",
     "enable_archivelog",
-    "availabilityDomain",
     "replicas",
     "loadBalService",
     "image",
-    "imagePullPolicy",
-    "imagePullSecrets",
-    "nodeLabels"
+    "imagePullPolicy"
   ],
   "type": "object"
 }
